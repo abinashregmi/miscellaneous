@@ -2,11 +2,11 @@
 #include <conio.h>
 #include <math.h>
 #include <stdlib.h>
-#define f(x)    x*x*x + x + 1
+#define f(x)    x * x * x  - 2 * x + 5
 
 void main()
 {
-    float x0, x1, x2, f0, f1, f2, e;
+    float x0, x1, x2, f0, f1, f2, e;  
     int step = 1;
     printf("\nEnter the value of x0: ");
     scanf("%f", &x0);
