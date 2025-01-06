@@ -21,18 +21,11 @@ void insertElement(int position, int element)
         list[i] = list[i - 1]; // Shift elements to the right
     }
     list[position] = element; // Insert the new element
-    size++;
-    printf("Inserted %d at position %d.\n", element, position);
+    size++;                   // Increment the size of the list
 }
 
-// Function to delete an element at a specific position
 void deleteElement(int position)
 {
-    if (size == 0)
-    {
-        printf("Error: List is empty, cannot delete element.\n");
-        return;
-    }
     if (position < 0 || position >= size)
     {
         printf("Error: Invalid position. Valid range is 0 to %d.\n", size - 1);
@@ -42,7 +35,7 @@ void deleteElement(int position)
     {
         list[i] = list[i + 1]; // Shift elements to the left
     }
-    size--;
+    size--; // Decrement the size of the list
     printf("Deleted element at position %d.\n", position);
 }
 
@@ -69,21 +62,15 @@ int searchElement(int element)
     {
         if (list[i] == element)
         {
-            return i; // Return the index of the element
+            return i; // Return the index if the element is found
         }
     }
-    return -1; // Element not found
+    return -1; // Return -1 if the element is not found
 }
 
-// Function to display all elements in the list
 void displayList()
 {
-    if (size == 0)
-    {
-        printf("The list is empty.\n");
-        return;
-    }
-    printf("List elements: ");
+    printf("List: ");
     for (int i = 0; i < size; i++)
     {
         printf("%d ", list[i]);
@@ -100,7 +87,13 @@ int main()
 
     displayList(); // Display the list
 
-    mergeLists(list, size, list, size); // Merge the list with itself
+    // Create a second list
+    int list2[MAX_SIZE] = {5, 25, 35};
+    int size2 = 3;
+
+    // Merge the second list into the first list
+    size = mergeLists(list, size, list2, size2);
+    displayList(); // Display the merged list
 
     deleteElement(1); // Delete the element at position 1
     displayList();    // Display the list after deletion
