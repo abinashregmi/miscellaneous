@@ -8,7 +8,7 @@ void bresenhamLine(int x1, int y1, int x2, int y2) {
     int gd = DETECT, gm;
     char driver[] = "";  
     initgraph(&gd, &gm, driver);
-    
+
     int dx = abs(x2 - x1);
     int dy = abs(y2 - y1);
     int x, y;

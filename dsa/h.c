@@ -88,7 +88,7 @@ int main()
     displayList(); // Display the list
 
     // Create a second list
-    int list2[MAX_SIZE] = {5, 25, 35};
+    int list2[MAX_SIZE] = {56, 36, 33};
     int size2 = 3;
 
     // Merge the second list into the first list
