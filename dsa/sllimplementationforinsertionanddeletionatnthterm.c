@@ -48,6 +48,15 @@ void insertNode(int pos, struct node *pred, int val)
     }
 }
 
+// Function to merge a node
+void mergenode(struct node *pred)
+{
+    struct node *temp = pred->next;
+    pred->info += temp->info;
+    pred->next = temp->next;
+    free(temp);
+}
+
 // Function to delete a node
 void deletenode(struct node *del)
 {
@@ -100,6 +109,10 @@ int main()
     insertNode(6, NULL, 13);
     printf("List after inserting 12 at position 2: ");
     display();  // Display the list after insertion at position 2
+
+    mergenode(list->next);  // Merge the node after the head
+    printf("List after merging the node after the head with the head:");
+    display();  // Display the list after merging       
 
     return 0;
 }
