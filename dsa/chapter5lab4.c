@@ -30,7 +30,7 @@ void insertAtEnd(int value) {
     newNode->data = value;
     if (head == NULL) {
         head = newNode;
-        newNode->next = head;
+        newNode->next = head;    
     } else {
         struct node* temp = head;
         while (temp->next != head) {

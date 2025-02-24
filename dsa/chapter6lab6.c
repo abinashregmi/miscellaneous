@@ -64,7 +64,7 @@ void mergeSort(int A[], int left, int right) {
         merge(A, left, mid, right);
     }
 }
-
+   
 // Function to partition the array for Quick Sort
 int partition(int A[], int low, int high) {
     int pivot = A[high];
