@@ -19,7 +19,7 @@ int main()
         scanf("%f", &b[i]);
     }
     for (k = 0; k <= n; k++)
-    {
+    {  
         pivot = a[k][k];
         if (fabs(pivot < 0.000001))
             printf("Method failed\n");

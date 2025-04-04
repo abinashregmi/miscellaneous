@@ -71,7 +71,7 @@ int main() {
     double alpha = 0.0, beta = 1.0;
     double h = 0.01;
     
-    shooting_method(a, b, alpha, beta, h);
+    shooting_method(a, b, alpha, beta, h);  
     
     return 0;
 }
